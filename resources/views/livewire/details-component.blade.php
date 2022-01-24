@@ -1,4 +1,4 @@
-	<!--main area-->
+
 	<main id="main" class="main-site">
 		<style>
 			.regprice{
@@ -27,7 +27,7 @@
 							  <ul class="slides">
 
 							    <li data-thumb="{{ asset('assets/images/products/')}}/{{$product->image}}">
-							    	<img src="{{ asset('assets/images/products/')}}/{{$product->image}}" alt="{{$product->names}}}" />
+							    	<img src="{{ asset('assets/images/products/')}}/{{$product->image}}" alt="{{$product->names}}" />
 							    </li>
                                  @php
 									 $images = explode(",",$product->images);
@@ -35,7 +35,7 @@
 								 @foreach ($images as $image)
 								@if($image)
 								<li data-thumb="{{ asset('assets/images/products/')}}/{{$image}}">
-							    	<img src="{{ asset('assets/images/products/')}}/{{$image}}" alt="{{$product->names}}}" />
+							    	<img src="{{ asset('assets/images/products/')}}/{{$image}}" alt="{{$product->names}}" />
 							    </li>
 								@endif
 								 @endforeach

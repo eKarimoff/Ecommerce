@@ -4,7 +4,7 @@
           <div class="col-md-12">
               <div class="panel panel-default">
                   <div class="panel-heading">
-                      Sale Settings
+                      Sale Setting
                   </div>
                 
                   <div class="panel-body">

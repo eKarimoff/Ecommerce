@@ -7,7 +7,7 @@
             <div class="panel-body">
                 <div class="col-md-4">
                     @if($user->profile->image)
-                    <img src="{{asset('assets/images/profile')}}/{{$user->profile->image}}" width="50%" style="border-radius: 50%">
+                    <img src="{{asset('assets/images/profile')}}/{{$user->profile->image}}" width="100%" style="border-radius: 50%">
                     @else
                     <img src="{{asset('assets/images/profile/Random.png')}}" width="50%">
                     @endif

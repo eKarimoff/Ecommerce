@@ -1,5 +1,5 @@
 <?php
-
+//Admin Routes
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\HomeComponent;
@@ -31,6 +31,10 @@ use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminContactComponent;
 use App\Http\Livewire\Admin\AdminSettingComponent;
+use App\Http\Livewire\Admin\AdminAttributeComponent;
+use App\Http\Livewire\Admin\AdminAddAttributeComponent;
+use App\Http\Livewire\Admin\AdminEditAttributeComponent;
+// Users Routes
 use App\Http\Livewire\User\UserOrdersComponent;
 use App\Http\Livewire\User\UserOrdersDetailsComponent;
 use App\Http\Livewire\User\UserReviewComponent;
@@ -85,5 +89,8 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::get('/admin/order/{order_id}' ,AdminOrderDetailsComponent::class)->name('admin.orderdetails');
     Route::get('/admin/contact-us', AdminContactComponent::class)->name('admin.contact');
     Route::get('/admin/settings', AdminSettingComponent::class)->name('admin.setting');
+    Route::get('/admin/attributes',AdminAttributeComponent::class)->name('admin.attributes');
+    Route::get('/admin/attribute/add',AdminAddAttributeComponent::class)->name('admin.add_attribute');
+    Route::get('/admin/attribute/edit/{attribute_id}',AdminEditAttributeComponent::class)->name('admin.edit_attribute');
 });
 

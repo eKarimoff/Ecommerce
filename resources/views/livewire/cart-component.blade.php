@@ -20,7 +20,9 @@
                 <h3 class="box-title">Products Name</h3>
                 <ul class="products-cart">
                     @foreach (Cart::instance('cart')->content() as $item)
+                    <?=dd(Cart::instance('cart')->content())?>
                     <li class="pr-cart-item">
+                        
                         <div class="product-image">
                             <figure><img src="{{$item->model->image}}" alt="{{$item->model->name}}"></figure>
                         </div>

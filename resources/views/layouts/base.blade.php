@@ -81,6 +81,9 @@
 											<li class="menu-item" >
 												<a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
 											</li>
+											<li class="menu-item" >
+												<a title="Attributes" href="{{route('admin.attributes')}}">Attributes</a>
+											</li>
 											<li class="menu-item">
 												<a title="Products" href="{{route('admin.products')}}">All Products</a>
 											</li>

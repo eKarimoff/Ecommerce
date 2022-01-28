@@ -5,17 +5,18 @@
                Update Profile
             </div>
             <div class="panel-body">
-                <form wire:submit="updateProfile" >
-                <div class="col-md-4">
-                    @if(Session::has('message'))
-                    <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
-                    @endif
+                @if(Session::has('message'))
+                <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+                @endif
+                
+                <form wire:submit.prevent="updateProfile" >
+                    <div class="col-md-4">
                     @if($newimage)
-                    <img src="{{$newimage->temporaryUrl()}}" width="100%" style="border-radius: 50%">
+                        <img src="{{$newimage->temporaryUrl()}}" width="100%" style="border-radius: 50%">
                     @elseif($image)
-                    <img src="{{asset('assets/images/profile')}}/{{$image}}" width="100%" style="border-radius: 50%">
+                        <img src="{{asset('assets/images/profile')}}/{{$image}}" width="100%" style="border-radius: 50%">
                     @else
-                    <img src="{{asset('assets/images/profile/Random.png')}}" width="100%">
+                        <img src="{{asset('assets/images/profile/Random.png')}}" width="100%">
                     @endif
                     <input type="file" class="form-control" wire:model="newimage">
                 </div>

@@ -9,6 +9,7 @@ class DetailsComponent extends Component
 {
     public $slug;
     public $qty;
+    public $satt= [];
 
     public function mount($slug)
     {
@@ -18,7 +19,7 @@ class DetailsComponent extends Component
     }
     public function store($product_id, $product_name, $product_price)
     {
-        Cart::instance('cart')->add($product_id,$product_name,$this->qty,$product_price)->associate('App\Models\Product');
+        Cart::instance('cart')->add($product_id,$product_name,$this->qty,$product_price,$this->satt)->associate('App\Models\Product');
         session()->flash('success_message', 'Item added in Cart');
         return redirect()->route('product.cart');
     }

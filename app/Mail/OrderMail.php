@@ -12,7 +12,7 @@ class OrderMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public Order $order;
+    public $order;
     /**
      * Create a new message instance.
      *
@@ -20,7 +20,7 @@ class OrderMail extends Mailable
      */
     public function __construct($order)
     {
-        $this->order = $order;
+        $this->order = $order ;
     }
 
     /**
